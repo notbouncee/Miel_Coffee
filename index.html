@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <title>Miel.Bali Cafe - Artisanal Coffee & Healthy Food in Canggu</title>
+    <meta name="description" content="Experience tropical warmth at Miel.Bali Cafe in Canggu. Premium coffee, healthy cuisine, fast Wi-Fi, and laptop-friendly spaces for digital nomads and coffee lovers.">
+    <meta name="author" content="Miel.Bali Cafe">
+
+    <meta property="og:title" content="Miel.Bali Cafe - Artisanal Coffee & Healthy Food in Canggu">
+    <meta property="og:description" content="Where tropical warmth meets artisanal coffee. A sanctuary for digital nomads, coffee enthusiasts, and authentic Balinese hospitality.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">Miel.Bali</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <button class="btn-primary">Book a Table</button>
+                </div>
+                <div class="mobile-menu-btn">☰</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to
+                <span class="hero-accent">Miel.Bali</span>
+            </h1>
+            <p class="hero-text">
+                Where tropical warmth meets artisanal coffee. A sanctuary for digital nomads, 
+                coffee enthusiasts, and those seeking authentic Balinese hospitality.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary btn-large">View Our Menu</button>
+                <button class="btn-secondary btn-large">Book a Table</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">
+                        Where Coffee Meets
+                        <span class="text-accent">Community</span>
+                    </h2>
+                    <p class="section-text">
+                        Nestled in the heart of Canggu, Miel.Bali is more than just a cafe - 
+                        it's a haven for creators, dreamers, and coffee lovers. Our space blends 
+                        traditional Balinese warmth with modern comfort, creating the perfect 
+                        environment for work, connection, and inspiration.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3 class="feature-title">Fast Wi-Fi</h3>
+                            <p class="feature-text">High-speed internet perfect for digital nomads and remote workers.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Power Outlets</h3>
+                            <p class="feature-text">Every table equipped with power outlets for all your devices.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Pet-Friendly</h3>
+                            <p class="feature-text">Bring your furry friends to our welcoming outdoor patio.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="feature-title">Fresh Ingredients</h3>
+                            <p class="feature-text">Locally sourced, organic ingredients in every dish and drink.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="src/assets/featured-food.jpg" alt="Artisanal coffee and healthy breakfast at Miel.Bali Cafe">
+                    <div class="image-badge">
+                        <p class="badge-title">Since 2023</p>
+                        <p class="badge-text">Serving Canggu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="menu-header">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-text">
+                    Crafted with love using fresh, locally-sourced ingredients. 
+                    Every dish tells a story of Bali's rich culinary heritage.
+                </p>
+                <div class="badges">
+                    <span class="badge badge-v">V Vegetarian</span>
+                    <span class="badge badge-vg">VG Vegan</span>
+                    <span class="badge badge-gf">GF Gluten Free</span>
+                    <span class="badge badge-gf-opt">GF* Gluten Free Option</span>
+                </div>
+            </div>
+
+            <div class="menu-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="food">Food</button>
+                    <button class="tab-btn" data-tab="drinks">Drinks</button>
+                </div>
+
+                <div class="tab-content active" id="food">
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Avocado Toast Deluxe</h3>
+                                <span class="menu-price">75K</span>
+                            </div>
+                            <p class="menu-description">House-made sourdough, smashed avocado, cherry tomatoes, feta, microgreens</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-v">V</span>
+                                <span class="badge badge-gf-opt">GF*</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Bali Bowl</h3>
+                                <span class="menu-price">85K</span>
+                            </div>
+                            <p class="menu-description">Coconut rice, grilled tofu, vegetables, peanut sauce, fried shallots</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                                <span class="badge badge-gf">GF</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Nasi Goreng Kampung</h3>
+                                <span class="menu-price">65K</span>
+                            </div>
+                            <p class="menu-description">Traditional Indonesian fried rice, free-range egg, keropok, pickles</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-gf-opt">GF*</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Smoothie Bowl</h3>
+                                <span class="menu-price">70K</span>
+                            </div>
+                            <p class="menu-description">Acai, banana, coconut, granola, fresh fruits, chia seeds</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                                <span class="badge badge-gf">GF</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Grilled Fish Tacos</h3>
+                                <span class="menu-price">95K</span>
+                            </div>
+                            <p class="menu-description">Fresh catch of the day, cabbage slaw, sriracha mayo, lime</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-gf-opt">GF*</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Croissant & Jam</h3>
+                                <span class="menu-price">45K</span>
+                            </div>
+                            <p class="menu-description">Buttery French croissant with house-made tropical fruit jam</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-v">V</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="drinks">
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Single Origin Pour Over</h3>
+                                <span class="menu-price">50K</span>
+                            </div>
+                            <p class="menu-description">Rotating selection of premium Indonesian coffee beans</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Dirty Chai Latte</h3>
+                                <span class="menu-price">55K</span>
+                            </div>
+                            <p class="menu-description">Spiced chai blend with espresso shot, steamed oat milk</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-gf-opt">VG*</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Coconut Flat White</h3>
+                                <span class="menu-price">48K</span>
+                            </div>
+                            <p class="menu-description">Double espresso with steamed coconut milk, house signature</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Tropical Green Smoothie</h3>
+                                <span class="menu-price">65K</span>
+                            </div>
+                            <p class="menu-description">Spinach, mango, pineapple, coconut water, chia seeds</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                                <span class="badge badge-gf">GF</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Cold Brew Tonic</h3>
+                                <span class="menu-price">52K</span>
+                            </div>
+                            <p class="menu-description">House cold brew, tonic water, orange peel, refreshing twist</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Fresh Coconut Water</h3>
+                                <span class="menu-price">35K</span>
+                            </div>
+                            <p class="menu-description">Straight from the shell, naturally hydrating</p>
+                            <div class="menu-badges">
+                                <span class="badge badge-vg">VG</span>
+                                <span class="badge badge-gf">GF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-text">
+                    Our story began with a simple dream: to create a space where exceptional coffee meets authentic Balinese hospitality. 
+                    From bean to cup, we're passionate about sourcing and brewing the finest Indonesian coffee.
+                </p>
+            </div>
+
+            <!-- Coffee Story Section -->
+            <div class="coffee-story-section">
+                <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Our Coffee Story</h3>
+                <div class="story-grid">
+                    <div class="story-card">
+                        <h4 class="story-title">🌱 Single Origin Sourcing</h4>
+                        <p class="story-text">We partner directly with local farmers across Indonesia's coffee regions, ensuring fair trade and exceptional quality from farm to cup.</p>
+                    </div>
+                    <div class="story-card">
+                        <h4 class="story-title">☕ Expert Roasting</h4>
+                        <p class="story-text">Our master roasters carefully develop each bean's unique flavor profile, highlighting the distinct characteristics of Indonesian terroir.</p>
+                    </div>
+                    <div class="story-card">
+                        <h4 class="story-title">🎯 Precision Brewing</h4>
+                        <p class="story-text">Using traditional and modern brewing methods, we extract the perfect balance of flavors to create your ideal cup.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TikTok Videos Section -->
+            <div class="tiktok-section">
+                <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Our TikTok Vibes</h3>
+                <p class="section-text">Experience the energy and atmosphere of Miel.Bali through our latest TikTok videos.</p>
+                <div class="tiktok-grid">
+                    <div class="tiktok-video">
+                        <iframe 
+                            src="https://www.tiktok.com/embed/v2/7234567890123456789" 
+                            width="325" 
+                            height="580" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-caption">Morning coffee ritual ☕</p>
+                    </div>
+                    <div class="tiktok-video">
+                        <iframe 
+                            src="https://www.tiktok.com/embed/v2/7234567890123456790" 
+                            width="325" 
+                            height="580" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-caption">Latte art masterpiece 🎨</p>
+                    </div>
+                    <div class="tiktok-video">
+                        <iframe 
+                            src="https://www.tiktok.com/embed/v2/7234567890123456791" 
+                            width="325" 
+                            height="580" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-caption">Cafe vibes & laptop life 💻</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="social-media-section">
+                <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Follow Our Journey</h3>
+                <p class="section-text">Stay connected and discover daily inspiration from our cafe community.</p>
+                <div class="social-grid">
+                    <div class="social-card">
+                        <div class="social-icon">📸</div>
+                        <h4 class="social-title">@miel.bali</h4>
+                        <p class="social-text">Daily moments, coffee art, and behind-the-scenes stories</p>
+                        <a href="#" class="social-link">Follow on Instagram</a>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-icon">🎵</div>
+                        <h4 class="social-title">@miel.bali</h4>
+                        <p class="social-text">Coffee tutorials, community vibes, and cafe atmosphere</p>
+                        <a href="#" class="social-link">Follow on TikTok</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="src/assets/hero-cafe-interior.jpg" alt="Modern Balinese cafe interior with natural lighting">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Main Dining Area</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="src/assets/outdoor-seating.jpg" alt="Cozy outdoor patio with tropical plants">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Garden Patio</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="src/assets/coffee-drinks.jpg" alt="Specialty coffee drinks with beautiful latte art">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Artisan Coffee</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="src/assets/featured-food.jpg" alt="Healthy breakfast and coffee spread">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Fresh Cuisine</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <div class="amenity-icon">📶</div>
+                    <h3 class="amenity-title">Fast Wi-Fi</h3>
+                    <p class="amenity-text">High-speed internet</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">🔌</div>
+                    <h3 class="amenity-title">Power Outlets</h3>
+                    <p class="amenity-text">Every seat powered</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">🐕</div>
+                    <h3 class="amenity-title">Pet-Friendly</h3>
+                    <p class="amenity-text">Outdoor patio welcome</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">❄️</div>
+                    <h3 class="amenity-title">AC & Fan</h3>
+                    <p class="amenity-text">Perfect temperature</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-header">
+                <h2 class="section-title">Visit Us</h2>
+                <p class="section-text">
+                    Ready to experience Miel.Bali? Reserve your table or simply drop by. 
+                    We're here to make your visit memorable.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h3 class="info-title">Location</h3>
+                                <p class="info-detail">Jl. Pantai Batu Bolong No. 88</p>
+                                <p class="info-sub">Canggu, Bali 80361</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-content">
+                                <h3 class="info-title">Opening Hours</h3>
+                                <p class="info-detail">Daily: 7:00 AM - 10:00 PM</p>
+                                <p class="info-sub">Extended hours on weekends</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h3 class="info-title">Phone</h3>
+                                <p class="info-detail">+62 361 123 4567</p>
+                                <p class="info-sub">WhatsApp available</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📸</div>
+                            <div class="info-content">
+                                <h3 class="info-title">Social Media</h3>
+                                <p class="info-detail">@miel.bali</p>
+                                <p class="info-sub">Follow for daily updates</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <div class="map-icon">📍</div>
+                            <p class="map-title">Interactive Map</p>
+                            <p class="map-subtitle">Located in the heart of Canggu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation-form">
+                    <div class="form-header">
+                        <h3 class="form-title">Book a Table</h3>
+                        <p class="form-subtitle">Secure your spot for the perfect cafe experience</p>
+                    </div>
+
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Guests</label>
+                                <input type="number" id="guests" name="guests" min="1" max="12" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Special Requests (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any dietary requirements or special occasions?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-large btn-full">Reserve Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Miel.Bali</h3>
+                    <p class="footer-description">
+                        Where tropical warmth meets artisanal coffee. Creating spaces for 
+                        connection, creativity, and community in the heart of Canggu.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                        <a href="#" class="social-link">Google Maps</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#space">Our Space</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Visit Us</h4>
+                    <div class="footer-info">
+                        <p>Jl. Pantai Batu Bolong No. 88</p>
+                        <p>Canggu, Bali 80361</p>
+                        <p>Daily: 7:00 AM - 10:00 PM</p>
+                        <p>+62 361 123 4567</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    Made with ❤️ in Bali © 2024 Miel.Bali
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
