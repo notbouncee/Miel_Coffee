@@ -37,87 +37,112 @@
     </nav>
 
     
-    <!-- About Us Section -->
-    <section id="about" class="gallery">
-        <div class="container">
-            <div class="gallery-header">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-text">
-                    Our story began with a simple dream: to create a space where exceptional coffee meets authentic Balinese hospitality. 
-                    From bean to cup, we're passionate about sourcing and brewing the finest Indonesian coffee.
-                </p>
-            </div>
+    <!-- About Us Section (Starbucks-style layout) -->
+    <section id="about" class="about">
 
-            <!-- Coffee Story Section -->
-            <div class="coffee-story-section">
-                <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Our Coffee Story</h3>
-                <div class="story-grid">
-                    <div class="story-card">
-                        <h4 class="story-title">🌱 Single Origin Sourcing</h4>
-                        <p class="story-text">We partner directly with local farmers across Indonesia's coffee regions, ensuring fair trade and exceptional quality from farm to cup.</p>
-                    </div>
-                    <div class="story-card">
-                        <h4 class="story-title">☕ Expert Roasting</h4>
-                        <p class="story-text">Our master roasters carefully develop each bean's unique flavor profile, highlighting the distinct characteristics of Indonesian terroir.</p>
-                    </div>
-                    <div class="story-card">
-                        <h4 class="story-title">🎯 Precision Brewing</h4>
-                        <p class="story-text">Using traditional and modern brewing methods, we extract the perfect balance of flavors to create your ideal cup.</p>
+    <!-- Breadcrumb + Hero -->
+    <div class="container">
+        <h1 class="about-hero__title">About Us</h1>
+         <p class="about-hero__subtitle">
+            Where tropical warmth meets artisanal coffee — a space for connection, creativity, and community.
+        </p>
+    </div>
+
+    <div class="container about-body">
+        <!-- Our Story (two-column) -->
+        <section class="about-intro">
+            <div class="two-col">
+                <div class="col col--image">
+                    <img src="src/assets/outdoor-seating.jpg" alt="Cozy outdoor patio with tropical plants">
+                </div>
+                <div class="col col--copy">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="section-text">
+                        Our journey started with a simple dream: serve exceptional Indonesian coffee with genuine Balinese
+                        hospitality. From bean to cup, we partner with local farmers and roast to highlight the islands’ unique
+                        terroir — then craft every cup with care.
+                    </p>
+
+                    <div class="key-points">
+                        <div class="point">
+                            <h4>Single-Origin Sourcing</h4>
+                            <p>Direct relationships with farmers across Indonesia for quality and fairness.</p>
+                        </div>
+                        <div class="point">
+                            <h4>Expert Roasting</h4>
+                            <p>Profiles that bring out balance, sweetness, and clarity in every bean.</p>
+                        </div>
+                        <div class="point">
+                            <h4>Precision Brewing</h4>
+                            <p>Classic and modern methods to dial in your perfect cup.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- Mission & Values (inspired by Starbucks) -->
+        <section class="about-mission">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-text mission-copy">
+                To inspire and nurture our community — one person, one cup, and one neighborhood at a time.
+            </p>
+
+            <h3 class="section-subtitle">Our Values</h3>
+            <ul class="values-grid">
+                <li class="value-card">
+                    <h4>Warmth & Belonging</h4>
+                    <p>Everyone is welcome; we create a space where people feel at home.</p>
+                </li>
+                <li class="value-card">
+                    <h4>Courage to Improve</h4>
+                    <p>We challenge the status quo and grow together.</p>
+                </li>
+                <li class="value-card">
+                    <h4>Connection & Respect</h4>
+                    <p>We show up with transparency, dignity, and care.</p>
+                </li>
+                <li class="value-card">
+                    <h4>Own the Result</h4>
+                    <p>We deliver our best and hold ourselves accountable.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- gallery -->
+        <section class="about-gallery">
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="src/assets/hero-cafe-interior.jpg" alt="Modern Balinese cafe interior with natural lighting">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title">Main Dining Area</h3>
-                    </div>
+                    <div class="gallery-overlay"><h3 class="gallery-title">Main Dining Area</h3></div>
                 </div>
                 <div class="gallery-item">
                     <img src="src/assets/outdoor-seating.jpg" alt="Cozy outdoor patio with tropical plants">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title">Garden Patio</h3>
-                    </div>
+                    <div class="gallery-overlay"><h3 class="gallery-title">Garden Patio</h3></div>
                 </div>
                 <div class="gallery-item">
                     <img src="src/assets/coffee-drinks.jpg" alt="Specialty coffee drinks with beautiful latte art">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title">Artisan Coffee</h3>
-                    </div>
+                    <div class="gallery-overlay"><h3 class="gallery-title">Artisan Coffee</h3></div>
                 </div>
                 <div class="gallery-item">
                     <img src="src/assets/featured-food.jpg" alt="Healthy breakfast and coffee spread">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title">Fresh Cuisine</h3>
-                    </div>
+                    <div class="gallery-overlay"><h3 class="gallery-title">Fresh Cuisine</h3></div>
                 </div>
             </div>
+        </section>
 
+        <!-- amenities -->
+        <section class="about-amenities">
             <div class="amenities-grid">
-                <div class="amenity-item">
-                    <div class="amenity-icon">📶</div>
-                    <h3 class="amenity-title">Fast Wi-Fi</h3>
-                    <p class="amenity-text">High-speed internet</p>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-icon">🔌</div>
-                    <h3 class="amenity-title">Power Outlets</h3>
-                    <p class="amenity-text">Every seat powered</p>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-icon">🐕</div>
-                    <h3 class="amenity-title">Pet-Friendly</h3>
-                    <p class="amenity-text">Outdoor patio welcome</p>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-icon">❄️</div>
-                    <h3 class="amenity-title">AC & Fan</h3>
-                    <p class="amenity-text">Perfect temperature</p>
-                </div>
+                <div class="amenity-item"><div class="amenity-icon">📶</div><h3 class="amenity-title">Fast Wi-Fi</h3><p class="amenity-text">High-speed internet</p></div>
+                <div class="amenity-item"><div class="amenity-icon">🔌</div><h3 class="amenity-title">Power Outlets</h3><p class="amenity-text">Every seat powered</p></div>
+                <div class="amenity-item"><div class="amenity-icon">🐕</div><h3 class="amenity-title">Pet-Friendly</h3><p class="amenity-text">Outdoor patio welcome</p></div>
+                <div class="amenity-item"><div class="amenity-icon">❄️</div><h3 class="amenity-title">AC &amp; Fan</h3><p class="amenity-text">Perfect temperature</p></div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div> 
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

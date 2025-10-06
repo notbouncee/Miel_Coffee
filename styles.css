@@ -1103,3 +1103,123 @@ img {
         padding: 0 1rem;
     }
 }
+
+
+/* 1) Scope About padding to body only (hero needs full-bleed) */
+.about { padding: 0; }                 /* overrides earlier padding on .about */
+.about-body { padding: var(--section-padding); }
+
+/* 2) Hero + breadcrumb */
+.about-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0 5rem;
+  color: var(--foreground);
+}
+.about-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  /* soft wash for legibility, stays on-brand */
+  background: linear-gradient(to bottom,
+    hsla(48,44%,96%,.70), hsla(48,44%,96%,.95));
+}
+.about-hero .container { position: relative; z-index: 1; }
+
+.breadcrumbs {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  color: var(--muted-foreground);
+}
+.breadcrumbs a { color: inherit; text-decoration: none; }
+.breadcrumbs span { margin: 0 .4rem; }
+
+.about-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: .5rem 0;
+  color: var(--foreground);
+}
+.about-hero__subtitle {
+  max-width: 56ch;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+/* 3) Our Story two-column */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.col--image img {
+  width: 100%; height: auto;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+.col--copy .section-title { margin-bottom: .5rem; }
+
+/* Key points under the copy */
+.key-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.key-points .point {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .8rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+.key-points .point h4 {
+  margin: 0 0 .25rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+/* 4) Mission & Values */
+.about-mission { margin-top: 3rem; }
+.mission-copy { font-weight: 600; color: var(--foreground); }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.value-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .8rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+.value-card h4 {
+  margin: 0 0 .25rem;
+  font-family: var(--font-display);
+  color: var(--primary);
+}
+
+/* 5) Keep your existing gallery/amenities but allow About wrappers */
+.about-gallery {
+  padding: var(--section-padding);
+  background: linear-gradient(180deg, var(--background) 0%, hsl(60, 12%, 94%) 100%);
+}
+.about-amenities { margin-top: 2rem; }
+
+/* 6) Responsive tweaks (stack columns, reduce grids) */
+@media (max-width: 960px) {
+  .two-col { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .key-points { grid-template-columns: 1fr; }
+  .about-hero { padding: 4.5rem 0 3rem; }
+}
+@media (max-width: 520px) {
+  .values-grid { grid-template-columns: 1fr; }
+}
