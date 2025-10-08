@@ -301,10 +301,6 @@ img {
     padding-bottom: 2rem;
 }
 
-.about-content {
-    space-y: 1.5rem;
-}
-
 .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -405,12 +401,7 @@ img {
     font-weight: 500;
 }
 
-.badge-v {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-}
-
-.badge-vg {
+.badge-v, .badge-vg {
     background-color: var(--primary);
     color: var(--primary-foreground);
 }
@@ -1099,8 +1090,27 @@ img {
 
 
 /* 1) Scope About padding to body only (hero needs full-bleed) */
-.about { padding: 0; }                 /* overrides earlier padding on .about */
-.about-body { padding: var(--section-padding); }
+.about { padding: 0; }                /* overrides earlier padding on .about */
+.about-body{
+  /* roughly 5rem 0 */
+  padding: 2rem 0 4rem;  /* tighter top; keep some bottom breathing room */
+}
+
+/* Offset only for the About page so the fixed navbar doesn't cover content */
+:root { --nav-height: 4rem; } /* keep this in sync with your .nav-content height */
+
+.about-page { padding-top: var(--nav-height); }
+
+/* Make in-page anchors (e.g., #about) land below the fixed nav on this page */
+.about-page section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 8px);
+}
+
+/* Widen the About Us blurb */
+.about .about-hero__subtitle{
+  max-width: 900px;  
+}
+
 
 /* 2) Hero + breadcrumb */
 .about-hero {

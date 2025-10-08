@@ -10,6 +10,9 @@
     <title>Kintamani Coffee Story - Miel.Bali Cafe</title>
     <meta name="description" content="Discover the story of our signature Kintamani single-origin coffee from the volcanic highlands of Bali.">
     <meta name="author" content="Miel.Bali Cafe">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     
     <link rel="stylesheet" href="styles.css">
 
@@ -23,10 +26,10 @@
                 <div class="logo">Miel.Bali</div>
                 <div class="nav-links">
                     <a href="homepage.html">Home</a>
-                    <a href="#menu_">Menu</a> <!-- Fake button -->
+                    <a href="#menu_">Menu</a> 
                     <a href="story.html">Our Story</a>
                     <a href="#space">Our Space</a>
-                    <a href="homepage.html#about">About Us</a>
+                    <a href="aboutus.html">About Us</a>
                     <a href="#contact">Contact</a>
                     <button class="btn-primary">Book a Table</button>
                 </div>
@@ -291,13 +294,26 @@
                         </div>
                     </div>
 
-                    <div class="map-placeholder">
+                    <!-- Leaflet Map Container -->
+                    <div id="map" style="height: 400px;"></div>
+                    <script>
+                    var map = L.map('map').setView([-8.642680086327134, 115.14240439842624], 15);  // Coordinates for Miel Coffee
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+                    L.marker([-8.642680086327134, 115.14240439842624]).addTo(map)
+                    .bindPopup("Miel.Bali Cafe")
+                    .openPopup();
+                    </script>
+
+                    <!-- <div class="map-placeholder">
                         <div class="map-content">
                             <div class="map-icon">📍</div>
                             <p class="map-title">Find Us in Canggu</p>
                             <p class="map-subtitle">5 minutes from Echo Beach</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="reservation-form">
