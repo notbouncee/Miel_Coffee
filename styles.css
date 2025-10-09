@@ -309,10 +309,6 @@ img {
     padding-bottom: 2rem;
 }
 
-.about-content {
-    space-y: 1.5rem;
-}
-
 .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
