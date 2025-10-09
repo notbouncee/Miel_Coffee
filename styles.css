@@ -2,12 +2,12 @@
 
 /* CSS Variables - Design System */
 :root {
-    /* Colors - HSL Values - New Design Plan */
+    /* Colors - HSL Values */
     --primary: hsl(75, 80%, 20%);           /* Deep Green #3A5F0B */
     --primary-foreground: hsl(48, 44%, 96%); /* Off-White for contrast */
     --secondary: hsl(48, 44%, 96%);         /* Off-White #FAF8F0 */
     --secondary-foreground: hsl(0, 0%, 20%); /* Dark Charcoal */
-    --accent: hsl(60, 12%, 92%);          /* Warm Beige #F5F5DC */
+    --accent: hsl(60, 12%, 92%);            /* Warm Beige #F5F5DC */
     --accent-foreground: hsl(0, 0%, 20%);   /* Dark Charcoal */
     --background: hsl(48, 44%, 96%);        /* Off-White #FAF8F0 */
     --foreground: hsl(0, 0%, 20%);          /* Dark Charcoal #333333 */
@@ -73,6 +73,7 @@ img {
     line-height: 1.8;
     max-width: 600px;
     margin: 0 auto 2rem;
+    text-align: center;
 }
 
 .section-text-left {
@@ -103,7 +104,7 @@ img {
 }
 
 .btn-primary:hover {
-    background-color: hsl(12, 75%, 55%);
+    background-color: hsl(75, 80%, 15%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-warm);
 }
@@ -199,6 +200,12 @@ img {
     overflow: hidden;
 }
 
+/* Story page hero variant */
+.story-hero {
+    height: 60vh;
+    margin-top: 4rem;
+}
+
 .hero-bg {
     position: absolute;
     top: 0;
@@ -209,7 +216,7 @@ img {
     background-size: cover;
     background-position: center;
     z-index: 1;
-    filter: brightness(1.1) contrast(1.1)
+    filter: brightness(1.1) contrast(1.1);
 }
 
 .hero-overlay {
@@ -237,6 +244,7 @@ img {
     font-weight: bold;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-accent {
@@ -405,11 +413,7 @@ img {
     font-weight: 500;
 }
 
-.badge-v {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-}
-
+.badge-v,
 .badge-vg {
     background-color: var(--primary);
     color: var(--primary-foreground);
@@ -518,130 +522,10 @@ img {
     gap: 0.5rem;
 }
 
-/* About Us Section */
+/* Gallery Section */
 .gallery {
     padding: var(--section-padding);
     background: linear-gradient(180deg, var(--background) 0%, hsl(60, 12%, 94%) 100%);
-}
-
-/* Coffee Story Section */
-.coffee-story-section {
-    margin-bottom: 4rem;
-}
-
-.story-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.story-card {
-    background-color: var(--card);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-soft);
-    text-align: center;
-    transition: var(--transition-smooth);
-}
-
-.story-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -12px hsl(75, 80%, 20%, 0.2);
-}
-
-.story-title {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.story-text {
-    color: var(--muted-foreground);
-    line-height: 1.6;
-}
-
-/* TikTok Section */
-.tiktok-section {
-    margin-bottom: 4rem;
-}
-
-.tiktok-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-items: center;
-}
-
-.tiktok-video {
-    text-align: center;
-}
-
-/* Social Media Section */
-.social-media-section {
-    margin-bottom: 2rem;
-}
-
-.social-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.social-card {
-    background-color: var(--card);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-soft);
-    text-align: center;
-    transition: var(--transition-smooth);
-}
-
-.social-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -12px hsl(75, 80%, 20%, 0.2);
-}
-
-.social-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.social-title {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.social-text {
-    color: var(--muted-foreground);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.social-link {
-    display: inline-block;
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition-smooth);
-}
-
-.social-link:hover {
-    background-color: hsl(75, 80%, 15%);
-    transform: translateY(-2px);
 }
 
 .gallery-header {
@@ -708,6 +592,121 @@ img {
     color: white;
 }
 
+/* Story & Coffee Cards */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+}
+
+.story-card {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px hsl(75, 80%, 20%, 0.2);
+}
+
+.story-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.story-text {
+    color: var(--muted-foreground);
+    line-height: 1.6;
+}
+
+/* Social Media Section */
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.social-card {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px hsl(75, 80%, 20%, 0.2);
+}
+
+.social-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.social-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.social-text {
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.social-link {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.social-link:hover {
+    background-color: hsl(75, 80%, 15%);
+    transform: translateY(-2px);
+}
+
+/* TikTok Section */
+.tiktok-section {
+    margin-bottom: 4rem;
+}
+
+.tiktok-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.tiktok-video {
+    text-align: center;
+}
+
+/* Amenities */
 .amenities-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -723,7 +722,7 @@ img {
 .amenity-icon {
     width: 4rem;
     height: 4rem;
-    background-color: hsla(12, 65%, 62%, 0.1);
+    background-color: hsla(75, 80%, 20%, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -787,13 +786,17 @@ img {
 .info-icon {
     width: 3rem;
     height: 3rem;
-    background-color: hsla(12, 65%, 62%, 0.1);
+    background-color: hsla(75, 80%, 20%, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     font-size: 1.5rem;
+}
+
+.info-content {
+    flex: 1;
 }
 
 .info-title {
@@ -814,6 +817,7 @@ img {
     color: var(--muted-foreground);
 }
 
+/* Map Placeholder */
 .map-placeholder {
     background-color: var(--card);
     padding: 1.5rem;
@@ -849,6 +853,7 @@ img {
     color: var(--muted-foreground);
 }
 
+/* Forms */
 .reservation-form {
     background-color: var(--card);
     padding: 2rem;
@@ -884,10 +889,6 @@ img {
     gap: 1rem;
 }
 
-.form-row.three-col {
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .form-group {
     display: flex;
     flex-direction: column;
@@ -900,7 +901,8 @@ img {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     padding: 0.75rem;
     border: 1px solid var(--border);
     border-radius: 0.375rem;
@@ -911,10 +913,11 @@ img {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px hsla(12, 65%, 62%, 0.1);
+    box-shadow: 0 0 0 3px hsla(75, 80%, 20%, 0.1);
 }
 
 .form-group textarea {
@@ -930,7 +933,7 @@ img {
 }
 
 .footer-grid {
-    display: grid;
+    display: grid; 
     grid-template-columns: 2fr 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
@@ -958,13 +961,13 @@ img {
     gap: 1rem;
 }
 
-.social-link {
-    color: hsla(48, 44%, 96%, 0.6);
+.footer-social a {
+    color: var(--secondary);
     text-decoration: none;
     transition: var(--transition-smooth);
 }
 
-.social-link:hover {
+.footer-social a:hover {
     color: var(--accent-foreground);
 }
 
@@ -1094,379 +1097,5 @@ img {
     
     .container {
         padding: 0 1rem;
-    }
-}
-
-
-/* 1) Scope About padding to body only (hero needs full-bleed) */
-.about { padding: 0; }                 /* overrides earlier padding on .about */
-.about-body { padding: var(--section-padding); }
-
-/* 2) Hero + breadcrumb */
-.about-hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  padding: 6rem 0 5rem;
-  color: var(--foreground);
-}
-.about-hero::after {
-  content: "";
-  position: absolute; inset: 0;
-  /* soft wash for legibility, stays on-brand */
-  background: linear-gradient(to bottom,
-    hsla(48,44%,96%,.70), hsla(48,44%,96%,.95));
-}
-.about-hero .container { position: relative; z-index: 1; }
-
-.breadcrumbs {
-  font-size: .9rem;
-  margin-bottom: 1rem;
-  color: var(--muted-foreground);
-}
-.breadcrumbs a { color: inherit; text-decoration: none; }
-.breadcrumbs span { margin: 0 .4rem; }
-
-.about-hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin: .5rem 0;
-  color: var(--foreground);
-}
-.about-hero__subtitle {
-  max-width: 56ch;
-  line-height: 1.6;
-  color: var(--muted-foreground);
-}
-
-/* 3) Our Story two-column */
-.two-col {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-.col--image img {
-  width: 100%; height: auto;
-  border-radius: 1rem;
-  box-shadow: var(--shadow-soft);
-}
-.col--copy .section-title { margin-bottom: .5rem; }
-
-/* Key points under the copy */
-.key-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 1.25rem;
-}
-.key-points .point {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: .8rem;
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
-}
-.key-points .point h4 {
-  margin: 0 0 .25rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: var(--primary);
-}
-
-/* 4) Mission & Values */
-.about-mission { margin-top: 3rem; }
-.mission-copy { font-weight: 600; color: var(--foreground); }
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-.value-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: .8rem;
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
-}
-.value-card h4 {
-  margin: 0 0 .25rem;
-  font-family: var(--font-display);
-  color: var(--primary);
-}
-
-/* 5) Keep your existing gallery/amenities but allow About wrappers */
-.about-gallery {
-  padding: var(--section-padding);
-  background: linear-gradient(180deg, var(--background) 0%, hsl(60, 12%, 94%) 100%);
-}
-.about-amenities { margin-top: 2rem; }
-
-/* 6) Responsive tweaks (stack columns, reduce grids) */
-@media (max-width: 960px) {
-  .two-col { grid-template-columns: 1fr; }
-  .values-grid { grid-template-columns: repeat(2, 1fr); }
-  .key-points { grid-template-columns: 1fr; }
-  .about-hero { padding: 4.5rem 0 3rem; }
-}
-@media (max-width: 520px) {
-  .values-grid { grid-template-columns: 1fr; }
-}
-
-/* Coffee Story Page */
-.content-hero {
-    position: relative;
-    height: 60vh;
-    background-image: url('src/assets/hero-cafe-interior.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4rem;
-}
-
-.content-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(58, 95, 11, 0.3));
-}
-
-.content-hero-text {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    padding: 0 1.5rem;
-}
-
-.content-hero-title {
-    font-family: var(--font-display);
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.content-hero-subtitle {
-    font-size: 1.25rem;
-    opacity: 0.95;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.article-content {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-}
-
-.article-intro {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: var(--muted-foreground);
-    margin-bottom: 3rem;
-    font-weight: 300;
-}
-
-.article-section {
-    margin-bottom: 4rem;
-}
-
-.article-section h2 {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-}
-
-.article-section p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    color: var(--foreground);
-}
-
-.coffee-info-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.coffee-info-card {
-    background: var(--card);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-soft);
-    text-align: center;
-}
-
-.coffee-info-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.coffee-info-title {
-    font-family: var(--font-display);
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.coffee-info-text {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-}
-
-.full-width-image {
-    width: 100%;
-    margin: 3rem 0;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-}
-
-.full-width-image img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-.image-caption {
-    text-align: center;
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-    margin-top: 1rem;
-    font-style: italic;
-}
-
-.brewing-methods {
-    background: linear-gradient(180deg, var(--background) 0%, hsl(60, 12%, 94%) 100%);
-    padding: 3rem;
-    border-radius: 0.5rem;
-    margin: 3rem 0;
-}
-
-.brewing-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.brewing-method {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow-soft);
-}
-
-.brewing-method h3 {
-    font-family: var(--font-display);
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.brewing-specs {
-    list-style: none;
-    padding: 0;
-}
-
-.brewing-specs li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.brewing-specs li:last-child {
-    border-bottom: none;
-}
-
-.spec-label {
-    font-weight: 500;
-    color: var(--foreground);
-}
-
-.spec-value {
-    color: var(--muted-foreground);
-}
-
-.tasting-notes-section {
-    background: var(--primary);
-    color: var(--primary-foreground);
-    padding: 3rem;
-    border-radius: 0.5rem;
-    margin: 3rem 0;
-    text-align: center;
-}
-
-.tasting-notes-section h2 {
-    color: var(--primary-foreground);
-    margin-bottom: 2rem;
-}
-
-.tasting-notes-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-}
-
-.tasting-note {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.note-name {
-    font-family: var(--font-display);
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
-}
-
-.note-description {
-    font-size: 0.875rem;
-    opacity: 0.9;
-}
-
-.cta-section {
-    text-align: center;
-    padding: 4rem 0;
-}
-
-.cta-section h2 {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
-    .content-hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .coffee-info-grid,
-    .tasting-notes-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .brewing-grid {
-        grid-template-columns: 1fr;
     }
 }
