@@ -1,13 +1,11 @@
-/* Miel.Bali Cafe - Pure CSS Styles */
 
-/* CSS Variables - Design System */
 :root {
     /* Colors - HSL Values */
     --primary: hsl(75, 80%, 20%);           /* Deep Green #3A5F0B */
-    --primary-foreground: hsl(48, 44%, 96%); /* Off-White for contrast */
+    --primary-foreground: hsl(48, 44%, 96%); 
     --secondary: hsl(48, 44%, 96%);         /* Off-White #FAF8F0 */
     --secondary-foreground: hsl(0, 0%, 20%); /* Dark Charcoal */
-    --accent: hsl(60, 12%, 92%);            /* Warm Beige #F5F5DC */
+    --accent: hsl(60, 12%, 92%);          
     --accent-foreground: hsl(0, 0%, 20%);   /* Dark Charcoal */
     --background: hsl(48, 44%, 96%);        /* Off-White #FAF8F0 */
     --foreground: hsl(0, 0%, 20%);          /* Dark Charcoal #333333 */
@@ -90,6 +88,10 @@ img {
     color: var(--primary);
 }
 
+.text-accent-orange {
+    color: var(--button-accent);
+}
+
 /* Buttons */
 .btn-primary {
     background-color: var(--primary);
@@ -143,10 +145,11 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    background-color: hsla(48, 44%, 96%, 0.95);
+    background-color: var(--secondary);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
+    box-shadow: var(--shadow-soft);
 }
 
 .nav-container {
@@ -316,7 +319,6 @@ img {
 }
 .col--copy .section-title { margin-bottom: .5rem; }.col--copy .section-title { margin-bottom: .5rem; }
 
-/* Key points under the copy */
 .key-points {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -384,7 +386,6 @@ img {
   max-width: 900px;  
 }
 
-/* 2) Hero + breadcrumb */
 .about-hero {
   position: relative;
   background-size: cover;
@@ -401,7 +402,6 @@ img {
 .about-hero::after {
   content: "";
   position: absolute; inset: 0;
-  /* soft wash for legibility, stays on-brand */
   background: linear-gradient(to bottom,
     hsla(48,44%,96%,.70), hsla(48,44%,96%,.95));
 }
@@ -1220,7 +1220,6 @@ img {
     }
 }
 
-/* From Uiverse.io by david-mohseni */ 
 .wrapper {
   display: inline-flex;
   list-style: none;
